@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Прайс — A.Web</title>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet" />
+    <style>
+        /* Минимальные доопределения для страницы прайса — сохраняем атмосферу */
+        .pricing-hero {
+            padding: 60px 0 40px;
+            text-align: center;
+        }
+        .pricing-hero h1 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 48px;
+            font-weight: 700;
+            letter-spacing: -1px;
+            background: linear-gradient(135deg, #fff 30%, var(--text-muted) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 16px;
+        }
+        .pricing-hero p {
+            color: var(--text-muted);
+            font-size: 18px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .pricing-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 32px;
+            padding: 20px 0 60px;
+        }
+
+        .pricing-card {
+            background: var(--bg-card);
+            border-radius: 28px;
+            border: 1px solid var(--border-light);
+            padding: 32px 40px;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            transition: all 0.25s ease;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+        .pricing-card:hover {
+            border-color: var(--accent);
+            transform: translateY(-4px);
+            box-shadow: 0 18px 40px rgba(0,0,0,0.4);
+        }
+
+        .pricing-info {
+            flex: 2 1 260px;
+        }
+        .pricing-info h3 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 24px;
+            font-weight: 600;
+            color: #fff;
+            margin-bottom: 6px;
+            letter-spacing: -0.3px;
+        }
+        .pricing-info .desc {
+            color: var(--text-muted);
+            font-size: 15px;
+            margin: 0;
+            line-height: 1.5;
+            max-width: 400px;
+        }
+
+        .pricing-price {
+            flex: 0 0 auto;
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 30px;
+            font-weight: 700;
+            color: #fff;
+            background: rgba(116, 101, 194, 0.15);
+            padding: 8px 24px;
+            border-radius: 60px;
+            border: 1px solid rgba(116, 101, 194, 0.2);
+            letter-spacing: -0.3px;
+            white-space: nowrap;
+        }
+        .pricing-price small {
+            font-size: 18px;
+            font-weight: 400;
+            color: var(--text-muted);
+            margin-left: 4px;
+        }
+
+        .pricing-tag {
+            display: inline-block;
+            background: rgba(116, 101, 194, 0.2);
+            color: #b4a8f0;
+            font-size: 13px;
+            font-weight: 500;
+            padding: 2px 16px;
+            border-radius: 30px;
+            margin-top: 8px;
+            letter-spacing: 0.3px;
+            border: 1px solid rgba(116, 101, 194, 0.1);
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 15px;
+            font-weight: 500;
+            transition: color 0.2s;
+            margin-bottom: 20px;
+        }
+        .back-link:hover {
+            color: #fff;
+        }
+        .back-link svg {
+            width: 20px;
+            height: 20px;
+            fill: currentColor;
+        }
+
+        /* адаптив */
+        @media (max-width: 700px) {
+            .pricing-card {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 20px;
+                padding: 28px 24px;
+            }
+            .pricing-price {
+                font-size: 26px;
+                padding: 6px 20px;
+                width: 100%;
+                text-align: center;
+            }
+            .pricing-info h3 {
+                font-size: 22px;
+            }
+            .pricing-hero h1 {
+                font-size: 34px;
+            }
+        }
+        @media (max-width: 480px) {
+            .pricing-price {
+                font-size: 22px;
+                padding: 6px 12px;
+            }
+            .pricing-info .desc {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container header-content">
+            <a href="index.html" class="logo">
+                <img src="logo.svg" alt="A.Web логотип" />
+                <span style="display: none;">A.Web</span>
+            </a>
+            <nav class="nav-menu">
+                <a href="index.html#services">Услуги</a>
+                <a href="index.html#process">Процесс</a>
+                <a href="index.html#portfolio">Кейсы</a>
+                <a href="price.html">Прайс</a> 
+                <a href="index.html#cta">FAQ</a>
+            </nav>
+            <div class="header-contacts">
+                <a href="tel:89507162049" class="header-btn">+7 (950) 716-20-49</a>
+                <a href="https://t.me/frzmanager" target="_blank" class="header-btn">Telegram</a>
+                <a href="https://t.me/awebdsgn" target="_blank" class="btn-primary">Наш канал</a>
+                <a href="https://max.ru/u/f9LHodD0cOKoqRkYAJp980hdGNXbHpd_I7XL5P9IJL-reOM5U3hCOmzCIoU" target="_blank" class="btn-max">MAX</a>
+            </div>
+        </div>
+    </header>
+
+    <div id="top"></div>
+
+    <section class="pricing-hero">
+        <div class="container">
+            <a href="index.html" class="back-link">
+                <svg viewBox="0 0 24 24"><path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/></svg>
+                На главную
+            </a>
+            <h1>Прайс-лист</h1>
+            <p>Прозрачные цены на все услуги. Работаем под ключ, без скрытых платежей.</p>
+        </div>
+    </section>
+
+    <section class="pricing-grid container">
+        <!-- 1 -->
+        <div class="pricing-card">
+            <div class="pricing-info">
+                <h3>Сайт-визитка</h3>
+                <p class="desc">Одностраничный сайт с контактами, услугами и фирменным стилем. Идеально для старта.</p>
+                <span class="pricing-tag">до 1 страницы</span>
+            </div>
+            <div class="pricing-price">5 000 <small>— 7 000 ₽</small></div>
+        </div>
+
+        <!-- 2 -->
+        <div class="pricing-card">
+            <div class="pricing-info">
+                <h3>Сайт с каталогом</h3>
+                <p class="desc">До 3 страниц: каталог товаров/услуг, контакты, удобная админка для управления.</p>
+                <span class="pricing-tag">до 3 страниц + админка</span>
+            </div>
+            <div class="pricing-price">6 000 <small>— 9 000 ₽</small></div>
+        </div>
+
+        <!-- 3 -->
+        <div class="pricing-card">
+            <div class="pricing-info">
+                <h3>Доработка / правка сайта</h3>
+                <p class="desc">Внесение изменений в существующий сайт: блоки, контент, стили — от мелких правок до серьёзных доработок.</p>
+                <span class="pricing-tag">объём обсуждается</span>
+            </div>
+            <div class="pricing-price">2 000 <small>— 4 000 ₽</small></div>
+        </div>
+
+        <!-- 4 -->
+        <div class="pricing-card">
+            <div class="pricing-info">
+                <h3>Обслуживание сайта (подписка)</h3>
+                <p class="desc">Ежемесячная поддержка: оперативные правки, обновления, консультации и техподдержка.</p>
+                <span class="pricing-tag">гибкая подписка</span>
+            </div>
+            <div class="pricing-price">1 000 <small>— 2 000 ₽/мес</small></div>
+        </div>
+
+        <!-- дополнительный блок, чтобы было наглядно — можно убрать, но оставлю как “бонус” -->
+        <div style="margin-top: 12px; text-align: center; color: var(--text-muted); font-size: 15px; border-top: 1px solid var(--border-light); padding-top: 32px;">
+            <p style="max-width: 500px; margin: 0 auto;">Все цены указаны за работу под ключ. <br>Для сложных проектов возможен индивидуальный расчёт.</p>
+            <div style="display: flex; justify-content: center; gap: 18px; flex-wrap: wrap; margin-top: 20px;">
+                <a href="https://t.me/frzmanager" target="_blank" class="btn-cta-main" style="padding: 12px 34px;">Обсудить проект →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-content">
+            <div>
+                <p class="copyright">&copy; © 2026 A.Web. Все права защищены.</p>
+            </div>
+            <div class="footer-links">
+                <a href="tel:89507162049">Позвонить</a>
+                <a href="https://t.me/frzmanager" target="_blank">Telegram</a>
+                <a href="https://t.me/awebdsgn" target="_blank" class="footer-highlight">Канал</a>
+                <a href="https://max.ru/u/f9LHodD0cOKoqRkYAJp980hdGNXbHpd_I7XL5P9IJL-reOM5U3hCOmzCIoU" target="_blank" class="footer-highlight" style="background: #2a2f3e;">MAX</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

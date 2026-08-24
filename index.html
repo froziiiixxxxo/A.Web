@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>А.Web | Студия веб-дизайна</title>
+    <!-- Подключаем внешний CSS файл -->
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+    <header>
+    <div class="container header-content">
+        <!-- Логотип -->
+        <a href="index.html" class="logo">
+            <img src="logo.svg" alt="A.Web логотип" />
+            <span style="display: none;">A.Web</span>
+        </a>
+
+        <!-- КНОПКА ГАМБУРГЕРА -->
+        <button class="hamburger" id="hamburger" aria-label="Открыть меню">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <!-- МЕНЮ -->
+        <nav class="nav-menu" id="navMenu">
+            <a href="index.html#services">Услуги</a>
+            <a href="index.html#process">Процесс</a>
+            <a href="index.html#portfolio">Кейсы</a>
+            <a href="price.html">Прайс</a>
+            <a href="index.html#cta">FAQ</a>
+        </nav>
+
+        <!-- ОВЕРЛЕЙ (затемнение) -->
+        <div class="menu-overlay" id="menuOverlay"></div>
+
+        <!-- Контакты -->
+        <div class="header-contacts">
+            <a href="tel:89507162049" class="header-btn">+7 (950) 716-20-49</a>
+            <a href="https://t.me/frzmanager" target="_blank" class="header-btn">Telegram</a>
+            <a href="https://t.me/awebdsgn" target="_blank" class="btn-primary">Наш канал</a>
+            <a href="https://max.ru/u/f9LHodD0cOKoqRkYAJp980hdGNXbHpd_I7XL5P9IJL-reOM5U3hCOmzCIoU" target="_blank" class="btn-max">MAX</a>
+        </div>
+    </div>
+</header>
+
+    <!-- Якорь для начала страницы -->
+    <div id="top"></div>
+
+    <section class="hero">
+        <div class="container">
+            <h1>От идеи до работающего сайта</h1>
+            <p>Студия Веб-дизайна, создающая эстетичные и функциональные интерфейсы. Превращаем идеи в полноценные цифровые продукты.</p>
+            
+            <div class="hero-actions">
+    <a href="#portfolio" class="btn-hero-primary">Смотреть кейсы →</a>
+    <a href="#cta" class="btn-hero-accent">Обсудить проект</a>
+    <a href="price.html" class="btn-hero-accent" style="background: transparent; border: 1px solid var(--border-light);">Цены →</a>
+</div>
+        </div>
+    </section>
+
+    <!-- Блок: Услуги -->
+    <section class="services" id="services">
+        <div class="container">
+            <div class="section-header">
+                <h2>Что мы делаем</h2>
+                <span>Закрываем все вопросы по дизайну и разработке</span>
+            </div>
+            <div class="services-grid">
+                <div class="service-item">
+                    <h4>Сайты-визитки</h4>
+                    <p>Лаконичный и стильный одностраничный сайт для вашего бизнеса или личного бренда.</p>
+                </div>
+                <div class="service-item">
+                    <h4>Лендинги</h4>
+                    <p>Разработка продающих посадочных страниц с продуманной структурой для сбора лидов.</p>
+                </div>
+                <div class="service-item">
+                    <h4>Многостраничные сайты</h4>
+                    <p>Создание корпоративных сайтов, каталогов и портфолио с удобной навигацией.</p>
+                </div>
+                <div class="service-item">
+                    <h4>Редизайн</h4>
+                    <p>Освежу и модернизирую внешний вид устаревшего сайта для вашего бизнеса.</p>
+                </div>
+                <div class="service-item">
+                    <h4>Телеграм боты</h4>
+                    <p>Автоматизация бизнеса: сбор заявок, рассылки и простые интерактивные боты.</p>
+                </div>
+                <div class="service-item">
+                    <h4>Адаптивная верстка</h4>
+                    <p>Идеальное отображение сайта на всех устройствах: от ПК до любых смартфонов.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Блок: Таблица сравнения -->
+    <section class="comparison">
+        <div class="container">
+            <div class="section-header">
+                <h2>Наш подход</h2>
+                <span>Почему самописный сайт лучше, чем конструктор Tilda/Wix</span>
+            </div>
+            
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th>Критерий</th>
+                        <th>Самописный сайт</th>
+                        <th>Конструктор (Tilda/Wix)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Скорость разработки</td>
+                        <td>Быстрая, до 3 дней</td>
+                        <td>Долгая, недели</td>
+                    </tr>
+                    <tr>
+                        <td>Качество верстки</td>
+                        <td>Чистый код, высокая скорость загрузки</td>
+                        <td>Перегруженный код, часто тормозит</td>
+                    </tr>
+                    <tr>
+                        <td>Правки и доработки</td>
+                        <td>Безлимитные правки под ключ</td>
+                        <td>Ограниченные шаблоны, сложно кастомизировать</td>
+                    </tr>
+                    <tr>
+                        <td>Итоговая цена</td>
+                        <td>Фиксированная и прозрачная</td>
+                        <td>Платная подписка + скрытые платежи</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- Блок: Процесс работы -->
+    <section class="process" id="process">
+        <div class="container">
+            <div class="section-header">
+                <h2>Процесс работы</h2>
+                <span>Понятно и прозрачно на каждом этапе</span>
+            </div>
+            
+            <div class="process-grid">
+                <div class="process-step">
+                    <span class="step-number">1. Бриф</span>
+                    <h4>Знакомство</h4>
+                    <p>Обсуждаем цели и задачи проекта, разбираем потребности вашей целевой аудитории.</p>
+                </div>
+                <div class="process-step">
+                    <span class="step-number">2. Прототип</span>
+                    <h4>Визуализация</h4>
+                    <p>Создаем структуру сайта и показываем, как будет выглядеть будущий интерфейс.</p>
+                </div>
+                <div class="process-step">
+                    <span class="step-number">3. Правки</span>
+                    <h4>Корректировка</h4>
+                    <p>Вносим изменения и утверждаем окончательный дизайн-макет.</p>
+                </div>
+                <div class="process-step">
+                    <span class="step-number">4. Тест</span>
+                    <h4>Проверка</h4>
+                    <p>Тестируем адаптивность, работоспособность кнопок и форм обратной связи.</p>
+                </div>
+                <div class="process-step">
+                    <span class="step-number">5. Запуск</span>
+                    <h4>Релиз</h4>
+                    <p>Размещаем сайт на сервере, подключаем домен и проводим финальную проверку.</p>
+                </div>
+                <div class="process-step">
+                    <span class="step-number">6. Поддержка</span>
+                    <h4>После запуска</h4>
+                    <p>Продолжаем техническое сопровождение и отвечаю на вопросы.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Блок: Кейсы -->
+    <section class="portfolio" id="portfolio">
+        <div class="container">
+            <div class="section-header">
+                <h2>Живые примеры (Кейсы)</h2>
+                <span>Доказательство того, что мы не просто обещаем, а реально делаем</span>
+            </div>
+
+            <div class="project-card">
+                <div class="project-info">
+                    <span class="project-tag">Сайт-визитка</span>
+                    <h3>Территория цветов</h3>
+                    <p>Создание атмосферы с помощью дизайна. Нежный и воздушный сайт с удобным каталогом.</p>
+                    <a href="https://froziiiixxxxo.github.io/territoriacvetov/" target="_blank" class="btn-project">Смотреть кейс</a>
+                </div>
+                <div class="project-image" style="background-image: url('flower.jpg');"></div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-info">
+                    <span class="project-tag">Сайт-визитка</span>
+                    <h3>Салон Анна & Шик</h3>
+                    <p>Лаконичный, премиальный лендинг для салона красоты. Продуманная структура для демонстрации мастерства.</p>
+                    <a href="https://froziiiixxxxo.github.io/Anna-Shik/" target="_blank" class="btn-project">Смотреть кейс</a>
+                </div>
+                <div class="project-image" style="background-image: url('paricma.jpg');"></div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-info">
+                    <span class="project-tag">Сайт-портфолио</span>
+                    <h3>Портфолио STAY HUMAN</h3>
+                    <p>Портфолио для дизайнера в кибер стиле. Акцент на работы и мастерство</p>
+                    <a href="https://froziiiixxxxo.github.io/STAY-HUMAN/" target="_blank" class="btn-project">Смотреть кейс</a>
+                </div>
+                <div class="project-image" style="background-image: url('stay.jpg');"></div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- НОВЫЙ БЛОК: CTA (Call to Action) -->
+    <section class="cta-section" id="cta">
+        <div class="container">
+            <div class="cta-box">
+                <h2>Есть идея? Воплотим в жизнь!</h2>
+                <p>Напишите в Telegram, обсудим проект. Мы всегда на связи и отвечаем в течение пары часов.</p>
+                <div class="cta-actions">
+                    <a href="https://t.me/frzmanager" target="_blank" class="btn-cta-main">Обсудить проект →</a>
+                </div>
+                <div class="cta-bottom-link">
+                    <a href="https://t.me/frzmanager" target="_blank">Telegram</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Подвал -->
+    <footer>
+        <div class="container footer-content">
+            <div>
+                <p class="copyright">&copy; © 2026 A.Web. Все права защищены.</p>
+            </div>
+            
+            <div class="footer-links">
+                <a href="tel:89507162049">Позвонить</a>
+                <a href="https://t.me/frzmanager" target="_blank">Telegram</a>
+                <a href="https://t.me/awebdsgn" target="_blank" class="footer-highlight">Канал</a>
+                <!-- Дублируем ссылку на MAX в подвале для удобства -->
+                <a href="https://max.ru/u/f9LHodD0cOKoqRkYAJp980hdGNXbHpd_I7XL5P9IJL-reOM5U3hCOmzCIoU" target="_blank" class="footer-highlight" style="background: #2a2f3e;">MAX</a>
+            </div>
+        </div>
+    </footer>
+
+
+<script>
+    (function() {
+        const hamburger = document.getElementById('hamburger');
+        const navMenu = document.getElementById('navMenu');
+        const overlay = document.getElementById('menuOverlay');
+
+        function toggleMenu() {
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('open');
+            overlay.classList.toggle('active');
+            document.body.style.overflow = navMenu.classList.contains('open') ? 'hidden' : '';
+        }
+
+        function closeMenu() {
+            hamburger.classList.remove('active');
+            navMenu.classList.remove('open');
+            overlay.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        hamburger.addEventListener('click', toggleMenu);
+        overlay.addEventListener('click', closeMenu);
+
+        // Закрываем меню при клике на ссылку внутри
+        document.querySelectorAll('.nav-menu a').forEach(link => {
+            link.addEventListener('click', closeMenu);
+        });
+
+        // Закрываем при изменении размера окна (если стало широко)
+        window.addEventListener('resize', function() {
+            if (window.innerWidth > 820) {
+                closeMenu();
+            }
+        });
+    })();
+</script>
+
+
+</body>
+</html>
