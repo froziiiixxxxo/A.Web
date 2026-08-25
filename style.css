@@ -313,16 +313,6 @@ header {
     position: relative;
 }
 
-.hero::before {
-    content: "✦";
-    position: absolute;
-    top: 80px;
-    right: 10%;
-    color: var(--accent);
-    font-size: 28px;
-    animation: float 6s ease-in-out infinite;
-    opacity: 0.8;
-}
 @keyframes float {
     0% { transform: translateY(0px); }
     50% { transform: translateY(-12px); }
