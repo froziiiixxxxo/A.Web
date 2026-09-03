@@ -3,299 +3,489 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>А.Web | Студия веб-дизайна</title>
-    <!-- Подключаем внешний CSS файл -->
+    <title>A.Web — Студия веб-дизайна | Сайты под ключ от 3 дней</title>
+    <meta name="description" content="Студия веб-дизайна A.Web: сайты-визитки, лендинги, многостраничные сайты и Telegram-боты под ключ. Запуск от 3 дней, безлимитные правки, прозрачные цены." />
+    <meta name="theme-color" content="#05060B" />
+    <link rel="icon" type="image/svg+xml" href="logo.svg" />
     <link rel="stylesheet" href="style.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
 </head>
 <body>
 
-    <header>
-    <div class="container header-content">
-        <!-- Логотип -->
-        <a href="index.html" class="logo">
-            <img src="logo.svg" alt="A.Web логотип" />
-            <span style="display: none;">A.Web</span>
-        </a>
-
-        <!-- КНОПКА ГАМБУРГЕРА -->
-        <button class="hamburger" id="hamburger" aria-label="Открыть меню">
-            <span></span>
-            <span></span>
-            <span></span>
-        </button>
-
-        <!-- МЕНЮ -->
-        <nav class="nav-menu" id="navMenu">
-            <a href="index.html#services">Услуги</a>
-            <a href="index.html#process">Процесс</a>
-            <a href="index.html#portfolio">Кейсы</a>
-            <a href="price.html">Прайс</a>
-            <a href="index.html#cta">FAQ</a>
-        </nav>
-
-        <!-- ОВЕРЛЕЙ (затемнение) -->
-        <div class="menu-overlay" id="menuOverlay"></div>
-
-        <!-- Контакты -->
-        <div class="header-contacts">
-            <a href="tel:89507162049" class="header-btn">+7 (950) 716-20-49</a>
-            <a href="https://t.me/frzmanager" target="_blank" class="header-btn">Telegram</a>
-            <a href="https://t.me/awebdsgn" target="_blank" class="btn-primary">Наш канал</a>
-            <a href="https://max.ru/u/f9LHodD0cOKoqRkYAJp980hdGNXbHpd_I7XL5P9IJL-reOM5U3hCOmzCIoU" target="_blank" class="btn-max">MAX</a>
-        </div>
+    <!-- Прелоадер -->
+    <div class="preloader" id="preloader">
+        <img src="logo.svg" alt="A.Web" />
+        <div class="preloader-bar"></div>
     </div>
-</header>
 
-    <!-- Якорь для начала страницы -->
-    <div id="top"></div>
+    <!-- Прогресс скролла -->
+    <div class="progress" id="progress"></div>
 
+    <!-- Зернистая текстура -->
+    <div class="noise"></div>
+
+    <header id="header">
+        <div class="container header-content">
+            <a href="index.html" class="logo" aria-label="A.Web — на главную">
+                <img src="logo.svg" alt="A.Web логотип" />
+            </a>
+
+            <!-- Гамбургер -->
+            <button class="hamburger" id="hamburger" aria-label="Открыть меню" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+
+            <!-- Меню -->
+            <nav class="nav-menu" id="navMenu">
+                <a href="#services">Услуги</a>
+                <a href="#advantages">Подход</a>
+                <a href="#process">Процесс</a>
+                <a href="#portfolio">Кейсы</a>
+                <a href="price.html">Прайс</a>
+                <a href="#faq">FAQ</a>
+                <div class="nav-contacts">
+                    <a href="tel:89507162049">📞 +7 (950) 716-20-49</a>
+                    <a href="https://t.me/frzmanager" target="_blank" rel="noopener">Telegram — обсудить проект</a>
+                    <a href="https://t.me/awebdsgn" target="_blank" rel="noopener">✦ Наш Telegram-канал</a>
+                </div>
+            </nav>
+
+            <div class="menu-overlay" id="menuOverlay"></div>
+
+            <!-- Контакты -->
+            <div class="header-contacts">
+                <a href="tel:89507162049" class="header-btn">+7 (950) 716-20-49</a>
+                <a href="https://t.me/frzmanager" target="_blank" rel="noopener" class="header-btn">Telegram</a>
+                <a href="https://t.me/awebdsgn" target="_blank" rel="noopener" class="btn btn-primary">Наш канал</a>
+                <a href="https://max.ru/u/f9LHodD0cOKoqRkYAJp980hdGNXbHpd_I7XL5P9IJL-reOM5U3hCOmzCIoU" target="_blank" rel="noopener" class="btn btn-max">MAX</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- ==================== HERO ==================== -->
     <section class="hero">
+        <div class="hero-grid"></div>
+        <div class="orb orb-1" data-parallax="18"></div>
+        <div class="orb orb-2" data-parallax="-14"></div>
+        <div class="orb orb-3" data-parallax="10"></div>
+
         <div class="container">
-            <h1>От идеи до работающего сайта</h1>
-            <p>Студия Веб-дизайна, создающая эстетичные и функциональные интерфейсы. Превращаем идеи в полноценные цифровые продукты.</p>
-            
-            <div class="hero-actions">
-    <a href="#portfolio" class="btn-hero-primary">Смотреть кейсы →</a>
-    <a href="#cta" class="btn-hero-accent">Обсудить проект</a>
-    <a href="price.html" class="btn-hero-accent" style="background: transparent; border: 1px solid var(--border-light);">Цены →</a>
-</div>
+            <div class="hero-badge reveal">
+                <span class="dot"></span>
+                Студия веб-дизайна · Свободны для заказов
+            </div>
+
+            <h1 class="reveal" style="--d:.08s">От идеи —<br />до <span class="grad">работающего сайта</span></h1>
+
+            <p class="reveal" style="--d:.16s">Создаём эстетичные и функциональные интерфейсы. Превращаем идеи в полноценные цифровые продукты: быстро, под ключ и без конструкторов.</p>
+
+            <div class="hero-actions reveal" style="--d:.24s">
+                <a href="#portfolio" class="btn btn-hero btn-hero-white">Смотреть кейсы <span>↓</span></a>
+                <a href="#cta" class="btn btn-hero btn-hero-grad">Обсудить проект</a>
+                <a href="price.html" class="btn btn-hero btn-hero-ghost">Цены →</a>
+            </div>
+
+            <div class="hero-stats reveal" style="--d:.32s">
+                <div class="hstat"><b data-count="3">0</b><span>дня на запуск</span></div>
+                <div class="hstat"><b>∞</b><span>правок до результата</span></div>
+                <div class="hstat"><b data-count="100">0</b><span>% чистый код</span></div>
+                <div class="hstat"><b>24/7</b><span>на связи</span></div>
+            </div>
+
+            <div class="scroll-cue">Листай вниз</div>
         </div>
     </section>
 
-    <!-- Блок: Услуги -->
-    <section class="services" id="services">
-        <div class="container">
-            <div class="section-header">
-                <h2>Что мы делаем</h2>
-                <span>Закрываем все вопросы по дизайну и разработке</span>
+    <!-- ==================== MARQUEE ==================== -->
+    <div class="marquee" aria-hidden="true">
+        <div class="marquee-track">
+            <div class="marquee-group">
+                <span class="marquee-item">Сайты-визитки</span>
+                <span class="marquee-item">Лендинги</span>
+                <span class="marquee-item">Многостраничные сайты</span>
+                <span class="marquee-item">Редизайн</span>
+                <span class="marquee-item">Telegram-боты</span>
+                <span class="marquee-item">Адаптивная вёрстка</span>
+                <span class="marquee-item">Поддержка</span>
             </div>
+            <div class="marquee-group">
+                <span class="marquee-item">Сайты-визитки</span>
+                <span class="marquee-item">Лендинги</span>
+                <span class="marquee-item">Многостраничные сайты</span>
+                <span class="marquee-item">Редизайн</span>
+                <span class="marquee-item">Telegram-боты</span>
+                <span class="marquee-item">Адаптивная вёрстка</span>
+                <span class="marquee-item">Поддержка</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==================== УСЛУГИ ==================== -->
+    <section class="section" id="services">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="kicker">Услуги</span>
+                <h2>Что мы <span class="grad">делаем</span></h2>
+                <p>Закрываем все вопросы по дизайну и разработке — от первой идеи до технической поддержки.</p>
+            </div>
+
             <div class="services-grid">
-                <div class="service-item">
+                <div class="glass service-card reveal">
+                    <div class="service-top">
+                        <div class="service-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M3 9h18"/><path d="M9 21V9"/></svg>
+                        </div>
+                        <span class="service-num">/01</span>
+                    </div>
                     <h4>Сайты-визитки</h4>
                     <p>Лаконичный и стильный одностраничный сайт для вашего бизнеса или личного бренда.</p>
                 </div>
-                <div class="service-item">
+
+                <div class="glass service-card reveal" style="--d:.07s">
+                    <div class="service-top">
+                        <div class="service-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/><path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"/><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"/></svg>
+                        </div>
+                        <span class="service-num">/02</span>
+                    </div>
                     <h4>Лендинги</h4>
-                    <p>Разработка продающих посадочных страниц с продуманной структурой для сбора лидов.</p>
+                    <p>Продающие посадочные страницы с продуманной структурой для сбора заявок и лидов.</p>
                 </div>
-                <div class="service-item">
+
+                <div class="glass service-card reveal" style="--d:.14s">
+                    <div class="service-top">
+                        <div class="service-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83Z"/><path d="m22 17.65-9.17 4.16a2 2 0 0 1-1.66 0L2 17.65"/><path d="m22 12.65-9.17 4.16a2 2 0 0 1-1.66 0L2 12.65"/></svg>
+                        </div>
+                        <span class="service-num">/03</span>
+                    </div>
                     <h4>Многостраничные сайты</h4>
-                    <p>Создание корпоративных сайтов, каталогов и портфолио с удобной навигацией.</p>
+                    <p>Корпоративные сайты, каталоги и портфолио с удобной навигацией и админкой.</p>
                 </div>
-                <div class="service-item">
+
+                <div class="glass service-card reveal" style="--d:.21s">
+                    <div class="service-top">
+                        <div class="service-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 1 1-2.64-6.36"/><path d="M21 3v6h-6"/><path d="m9 12 2 2 4-4"/></svg>
+                        </div>
+                        <span class="service-num">/04</span>
+                    </div>
                     <h4>Редизайн</h4>
-                    <p>Освежу и модернизирую внешний вид устаревшего сайта для вашего бизнеса.</p>
+                    <p>Освежим и модернизируем внешний вид устаревшего сайта — без потери контента и позиций.</p>
                 </div>
-                <div class="service-item">
-                    <h4>Телеграм боты</h4>
-                    <p>Автоматизация бизнеса: сбор заявок, рассылки и простые интерактивные боты.</p>
+
+                <div class="glass service-card reveal" style="--d:.28s">
+                    <div class="service-top">
+                        <div class="service-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 8V4H8"/><rect x="4" y="8" width="16" height="12" rx="2"/><path d="M2 14h2"/><path d="M20 14h2"/><path d="M15 13v2"/><path d="M9 13v2"/></svg>
+                        </div>
+                        <span class="service-num">/05</span>
+                    </div>
+                    <h4>Telegram-боты</h4>
+                    <p>Автоматизация бизнеса: сбор заявок, рассылки и интерактивные боты под ваши задачи.</p>
                 </div>
-                <div class="service-item">
-                    <h4>Адаптивная верстка</h4>
-                    <p>Идеальное отображение сайта на всех устройствах: от ПК до любых смартфонов.</p>
+
+                <div class="glass service-card reveal" style="--d:.35s">
+                    <div class="service-top">
+                        <div class="service-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8"/><path d="M12 17v4"/></svg>
+                        </div>
+                        <span class="service-num">/06</span>
+                    </div>
+                    <h4>Адаптивная вёрстка</h4>
+                    <p>Идеальное отображение на всех устройствах: от широких мониторов до любых смартфонов.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Блок: Таблица сравнения -->
-    <section class="comparison">
+    <!-- ==================== ПОДХОД (СРАВНЕНИЕ) ==================== -->
+    <section class="section comparison-wrap" id="advantages" style="padding-top: 20px;">
         <div class="container">
-            <div class="section-header">
-                <h2>Наш подход</h2>
-                <span>Почему самописный сайт лучше, чем конструктор Tilda/Wix</span>
+            <div class="section-header center reveal">
+                <span class="kicker">Наш подход</span>
+                <h2>Самописный сайт <span class="grad">против конструктора</span></h2>
+                <p>Почему мы пишем код руками, а не собираем сайты в Tilda/Wix.</p>
             </div>
-            
-            <table class="comparison-table">
-                <thead>
-                    <tr>
-                        <th>Критерий</th>
-                        <th>Самописный сайт</th>
-                        <th>Конструктор (Tilda/Wix)</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Скорость разработки</td>
-                        <td>Быстрая, до 3 дней</td>
-                        <td>Долгая, недели</td>
-                    </tr>
-                    <tr>
-                        <td>Качество верстки</td>
-                        <td>Чистый код, высокая скорость загрузки</td>
-                        <td>Перегруженный код, часто тормозит</td>
-                    </tr>
-                    <tr>
-                        <td>Правки и доработки</td>
-                        <td>Безлимитные правки под ключ</td>
-                        <td>Ограниченные шаблоны, сложно кастомизировать</td>
-                    </tr>
-                    <tr>
-                        <td>Итоговая цена</td>
-                        <td>Фиксированная и прозрачная</td>
-                        <td>Платная подписка + скрытые платежи</td>
-                    </tr>
-                </tbody>
-            </table>
+
+            <div class="table-shell reveal">
+                <div class="table-scroll">
+                    <table class="comparison-table">
+                        <thead>
+                            <tr>
+                                <th>Критерий</th>
+                                <th>✓ Самописный сайт</th>
+                                <th>✕ Конструктор (Tilda/Wix)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Скорость разработки</td>
+                                <td><span class="cmp-yes">Быстрая, до 3 дней</span></td>
+                                <td><span class="cmp-no">Долгая, недели</span></td>
+                            </tr>
+                            <tr>
+                                <td>Качество вёрстки</td>
+                                <td><span class="cmp-yes">Чистый код, высокая скорость загрузки</span></td>
+                                <td><span class="cmp-no">Перегруженный код, часто тормозит</span></td>
+                            </tr>
+                            <tr>
+                                <td>Правки и доработки</td>
+                                <td><span class="cmp-yes">Безлимитные правки под ключ</span></td>
+                                <td><span class="cmp-no">Ограниченные шаблоны, сложно кастомизировать</span></td>
+                            </tr>
+                            <tr>
+                                <td>Итоговая цена</td>
+                                <td><span class="cmp-yes">Фиксированная и прозрачная</span></td>
+                                <td><span class="cmp-no">Платная подписка + скрытые платежи</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
         </div>
     </section>
 
-    <!-- Блок: Процесс работы -->
-    <section class="process" id="process">
+    <!-- ==================== ПРОЦЕСС ==================== -->
+    <section class="section" id="process" style="padding-top: 30px;">
         <div class="container">
-            <div class="section-header">
-                <h2>Процесс работы</h2>
-                <span>Понятно и прозрачно на каждом этапе</span>
+            <div class="section-header reveal">
+                <span class="kicker">Процесс</span>
+                <h2>Понятно и прозрачно <span class="grad">на каждом этапе</span></h2>
+                <p>Вы всегда знаете, что происходит с проектом и что будет дальше.</p>
             </div>
-            
+
             <div class="process-grid">
-                <div class="process-step">
-                    <span class="step-number">1. Бриф</span>
+                <div class="glass step-card reveal">
+                    <div class="step-badge"><span class="num">01</span><span class="label">Бриф</span></div>
                     <h4>Знакомство</h4>
                     <p>Обсуждаем цели и задачи проекта, разбираем потребности вашей целевой аудитории.</p>
                 </div>
-                <div class="process-step">
-                    <span class="step-number">2. Прототип</span>
+                <div class="glass step-card reveal" style="--d:.07s">
+                    <div class="step-badge"><span class="num">02</span><span class="label">Прототип</span></div>
                     <h4>Визуализация</h4>
-                    <p>Создаем структуру сайта и показываем, как будет выглядеть будущий интерфейс.</p>
+                    <p>Создаём структуру сайта и показываем, как будет выглядеть будущий интерфейс.</p>
                 </div>
-                <div class="process-step">
-                    <span class="step-number">3. Правки</span>
+                <div class="glass step-card reveal" style="--d:.14s">
+                    <div class="step-badge"><span class="num">03</span><span class="label">Правки</span></div>
                     <h4>Корректировка</h4>
-                    <p>Вносим изменения и утверждаем окончательный дизайн-макет.</p>
+                    <p>Вносим изменения и утверждаем окончательный дизайн-макет — до полного согласия.</p>
                 </div>
-                <div class="process-step">
-                    <span class="step-number">4. Тест</span>
+                <div class="glass step-card reveal" style="--d:.21s">
+                    <div class="step-badge"><span class="num">04</span><span class="label">Тест</span></div>
                     <h4>Проверка</h4>
                     <p>Тестируем адаптивность, работоспособность кнопок и форм обратной связи.</p>
                 </div>
-                <div class="process-step">
-                    <span class="step-number">5. Запуск</span>
+                <div class="glass step-card reveal" style="--d:.28s">
+                    <div class="step-badge"><span class="num">05</span><span class="label">Запуск</span></div>
                     <h4>Релиз</h4>
                     <p>Размещаем сайт на сервере, подключаем домен и проводим финальную проверку.</p>
                 </div>
-                <div class="process-step">
-                    <span class="step-number">6. Поддержка</span>
+                <div class="glass step-card reveal" style="--d:.35s">
+                    <div class="step-badge"><span class="num">06</span><span class="label">Поддержка</span></div>
                     <h4>После запуска</h4>
-                    <p>Продолжаем техническое сопровождение и отвечаю на вопросы.</p>
+                    <p>Продолжаем техническое сопровождение и оперативно отвечаем на вопросы.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Блок: Кейсы -->
-    <section class="portfolio" id="portfolio">
+    <!-- ==================== КЕЙСЫ ==================== -->
+    <section class="section portfolio" id="portfolio">
         <div class="container">
-            <div class="section-header">
-                <h2>Живые примеры (Кейсы)</h2>
-                <span>Доказательство того, что мы не просто обещаем, а реально делаем</span>
+            <div class="section-header center reveal">
+                <span class="kicker">Кейсы</span>
+                <h2>Живые примеры <span class="grad">наших работ</span></h2>
+                <p>Доказательство того, что мы не просто обещаем, а реально делаем.</p>
             </div>
 
-            <div class="project-card">
-                <div class="project-info">
-                    <span class="project-tag">Сайт-визитка</span>
+            <article class="case-card reveal">
+                <div class="case-media">
+                    <span class="case-tag">Сайт-визитка</span>
+                    <img src="flower.jpg" alt="Сайт «Территория цветов»" loading="lazy" />
+                </div>
+                <div class="case-info">
+                    <span class="idx">КЕЙС / 01</span>
                     <h3>Территория цветов</h3>
-                    <p>Создание атмосферы с помощью дизайна. Нежный и воздушный сайт с удобным каталогом.</p>
-                    <a href="https://froziiiixxxxo.github.io/territoriacvetov/" target="_blank" class="btn-project">Смотреть кейс</a>
+                    <p>Создание атмосферы с помощью дизайна. Нежный и воздушный сайт цветочного салона с удобным каталогом.</p>
+                    <div class="case-meta">
+                        <span>дизайн + вёрстка</span>
+                        <span>адаптив</span>
+                    </div>
+                    <a href="https://froziiiixxxxo.github.io/territoriacvetov/" target="_blank" rel="noopener" class="btn-project">Смотреть кейс <span class="arr">→</span></a>
                 </div>
-                <div class="project-image" style="background-image: url('flower.jpg');"></div>
-            </div>
+            </article>
 
-            <div class="project-card">
-                <div class="project-info">
-                    <span class="project-tag">Сайт-визитка</span>
-                    <h3>Салон Анна & Шик</h3>
+            <article class="case-card case-card--flip reveal">
+                <div class="case-media">
+                    <span class="case-tag">Сайт-визитка</span>
+                    <img src="paricma.jpg" alt="Сайт салона «Анна & Шик»" loading="lazy" />
+                </div>
+                <div class="case-info">
+                    <span class="idx">КЕЙС / 02</span>
+                    <h3>Салон Анна &amp; Шик</h3>
                     <p>Лаконичный, премиальный лендинг для салона красоты. Продуманная структура для демонстрации мастерства.</p>
-                    <a href="https://froziiiixxxxo.github.io/Anna-Shik/" target="_blank" class="btn-project">Смотреть кейс</a>
+                    <div class="case-meta">
+                        <span>премиум-стиль</span>
+                        <span>запись онлайн</span>
+                    </div>
+                    <a href="https://froziiiixxxxo.github.io/Anna-Shik/" target="_blank" rel="noopener" class="btn-project">Смотреть кейс <span class="arr">→</span></a>
                 </div>
-                <div class="project-image" style="background-image: url('paricma.jpg');"></div>
-            </div>
+            </article>
 
-            <div class="project-card">
-                <div class="project-info">
-                    <span class="project-tag">Сайт-портфолио</span>
+            <article class="case-card reveal">
+                <div class="case-media">
+                    <span class="case-tag">Сайт-портфолио</span>
+                    <img src="stay.jpg" alt="Портфолио STAY HUMAN" loading="lazy" />
+                </div>
+                <div class="case-info">
+                    <span class="idx">КЕЙС / 03</span>
                     <h3>Портфолио STAY HUMAN</h3>
-                    <p>Портфолио для дизайнера в кибер стиле. Акцент на работы и мастерство</p>
-                    <a href="https://froziiiixxxxo.github.io/STAY-HUMAN/" target="_blank" class="btn-project">Смотреть кейс</a>
+                    <p>Портфолио для дизайнера в кибер-стиле. Акцент на работы и мастерство — дерзко и запоминающе.</p>
+                    <div class="case-meta">
+                        <span>кибер-эстетика</span>
+                        <span>уникальный дизайн</span>
+                    </div>
+                    <a href="https://froziiiixxxxo.github.io/STAY-HUMAN/" target="_blank" rel="noopener" class="btn-project">Смотреть кейс <span class="arr">→</span></a>
                 </div>
-                <div class="project-image" style="background-image: url('stay.jpg');"></div>
-            </div>
-
+            </article>
         </div>
     </section>
 
-    <!-- НОВЫЙ БЛОК: CTA (Call to Action) -->
+    <!-- ==================== FAQ ==================== -->
+    <section class="section" id="faq" style="padding-top: 40px;">
+        <div class="container">
+            <div class="section-header center reveal">
+                <span class="kicker">FAQ</span>
+                <h2>Частые <span class="grad">вопросы</span></h2>
+                <p>Собрали то, о чём спрашивают чаще всего. Не нашли ответ — напишите нам.</p>
+            </div>
+
+            <div class="faq-list reveal">
+                <div class="glass faq-item">
+                    <button class="faq-q" type="button">
+                        Сколько стоит сайт?
+                        <span class="faq-icon"></span>
+                    </button>
+                    <div class="faq-a">
+                        <div class="faq-a-inner">
+                            <p>Сайт-визитка — от 5 000 ₽, сайт с каталогом — от 6 000 ₽, доработки — от 2 000 ₽. Полный прайс с описанием каждого тарифа — <a href="price.html">на странице цен</a>. Цена фиксируется до начала работы и не меняется.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="glass faq-item">
+                    <button class="faq-q" type="button">
+                        Какие сроки разработки?
+                        <span class="faq-icon"></span>
+                    </button>
+                    <div class="faq-a">
+                        <div class="faq-a-inner">
+                            <p>Сайт-визитку запускаем в среднем за 3 дня после получения брифа и материалов. Многостраничные проекты и каталоги — от 5–7 дней. Точные сроки фиксируем перед стартом и соблюдаем их.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="glass faq-item">
+                    <button class="faq-q" type="button">
+                        Можно ли вносить правки после запуска?
+                        <span class="faq-icon"></span>
+                    </button>
+                    <div class="faq-a">
+                        <div class="faq-a-inner">
+                            <p>Да. На этапе дизайна правки безлимитны — работаем до полного согласия. После запуска можно взять подписку на обслуживание: оперативные правки, обновления контента и консультации.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="glass faq-item">
+                    <button class="faq-q" type="button">
+                        Что нужно от меня для старта?
+                        <span class="faq-icon"></span>
+                    </button>
+                    <div class="faq-a">
+                        <div class="faq-a-inner">
+                            <p>Минимум: 15 минут на бриф — расскажете о бизнесе, целях и примерах, которые нравятся. Тексты и фото можно передать в любом виде — поможем структурировать и при необходимости допишем.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="glass faq-item">
+                    <button class="faq-q" type="button">
+                        Будет ли сайт хорошо выглядеть на телефоне?
+                        <span class="faq-icon"></span>
+                    </button>
+                    <div class="faq-a">
+                        <div class="faq-a-inner">
+                            <p>Обязательно. Адаптивная вёрстка входит в каждый проект: проверяем отображение на смартфонах, планшетах и десктопе, тестируем скорость загрузки и удобство навигации до сдачи работы.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== CTA ==================== -->
     <section class="cta-section" id="cta">
         <div class="container">
-            <div class="cta-box">
-                <h2>Есть идея? Воплотим в жизнь!</h2>
-                <p>Напишите в Telegram, обсудим проект. Мы всегда на связи и отвечаем в течение пары часов.</p>
+            <div class="cta-panel reveal">
+                <span class="kicker">Свяжитесь с нами</span>
+                <h2>Есть идея? <span style="background:linear-gradient(120deg,#C084FC,#6E5CFF);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent;">Воплотим в жизнь!</span></h2>
+                <p>Напишите в Telegram — обсудим проект. Мы всегда на связи и отвечаем в течение пары часов.</p>
                 <div class="cta-actions">
-                    <a href="https://t.me/frzmanager" target="_blank" class="btn-cta-main">Обсудить проект →</a>
+                    <a href="https://t.me/frzmanager" target="_blank" rel="noopener" class="btn btn-hero btn-hero-grad">Обсудить проект в Telegram <span class="arr">→</span></a>
+                    <a href="tel:89507162049" class="btn btn-hero btn-hero-ghost">+7 (950) 716-20-49</a>
                 </div>
-                <div class="cta-bottom-link">
-                    <a href="https://t.me/frzmanager" target="_blank">Telegram</a>
-                </div>
+                <div class="cta-note">Отвечаем в течение пары часов · ежедневно</div>
             </div>
         </div>
     </section>
 
-    <!-- Подвал -->
+    <!-- ==================== FOOTER ==================== -->
     <footer>
-        <div class="container footer-content">
-            <div>
-                <p class="copyright">&copy; © 2026 A.Web. Все права защищены.</p>
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo" aria-label="A.Web">
+                        <img src="logo.svg" alt="A.Web" style="height: 34px;" />
+                    </a>
+                    <p>Студия веб-дизайна. Создаём эстетичные и функциональные интерфейсы — от идеи до работающего сайта.</p>
+                    <div class="footer-socials">
+                        <a href="https://t.me/frzmanager" target="_blank" rel="noopener">Telegram</a>
+                        <a href="https://t.me/awebdsgn" target="_blank" rel="noopener" class="hl">Наш канал</a>
+                        <a href="https://max.ru/u/f9LHodD0cOKoqRkYAJp980hdGNXbHpd_I7XL5P9IJL-reOM5U3hCOmzCIoU" target="_blank" rel="noopener">MAX</a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h5>Навигация</h5>
+                    <a href="#services">Услуги</a>
+                    <a href="#advantages">Наш подход</a>
+                    <a href="#process">Процесс</a>
+                    <a href="#portfolio">Кейсы</a>
+                    <a href="price.html">Прайс</a>
+                </div>
+                <div class="footer-col">
+                    <h5>Контакты</h5>
+                    <a href="tel:89507162049">+7 (950) 716-20-49</a>
+                    <a href="https://t.me/frzmanager" target="_blank" rel="noopener">t.me/frzmanager</a>
+                    <a href="https://t.me/awebdsgn" target="_blank" rel="noopener">t.me/awebdsgn</a>
+                    <a href="https://max.ru/u/f9LHodD0cOKoqRkYAJp980hdGNXbHpd_I7XL5P9IJL-reOM5U3hCOmzCIoU" target="_blank" rel="noopener">MAX — мессенджер</a>
+                </div>
             </div>
-            
-            <div class="footer-links">
-                <a href="tel:89507162049">Позвонить</a>
-                <a href="https://t.me/frzmanager" target="_blank">Telegram</a>
-                <a href="https://t.me/awebdsgn" target="_blank" class="footer-highlight">Канал</a>
-                <!-- Дублируем ссылку на MAX в подвале для удобства -->
-                <a href="https://max.ru/u/f9LHodD0cOKoqRkYAJp980hdGNXbHpd_I7XL5P9IJL-reOM5U3hCOmzCIoU" target="_blank" class="footer-highlight" style="background: #2a2f3e;">MAX</a>
+            <div class="footer-bottom">
+                <span class="copyright">© <span id="year">2026</span> A.Web. Все права защищены.</span>
+                <span class="made">Сделано с <em>✦</em> студией A.Web — чистый код, без конструкторов</span>
             </div>
         </div>
     </footer>
 
+    <!-- Кнопка вверх -->
+    <button class="to-top" id="toTop" aria-label="Наверх">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m18 15-6-6-6 6"/></svg>
+    </button>
 
-<script>
-    (function() {
-        const hamburger = document.getElementById('hamburger');
-        const navMenu = document.getElementById('navMenu');
-        const overlay = document.getElementById('menuOverlay');
-
-        function toggleMenu() {
-            hamburger.classList.toggle('active');
-            navMenu.classList.toggle('open');
-            overlay.classList.toggle('active');
-            document.body.style.overflow = navMenu.classList.contains('open') ? 'hidden' : '';
-        }
-
-        function closeMenu() {
-            hamburger.classList.remove('active');
-            navMenu.classList.remove('open');
-            overlay.classList.remove('active');
-            document.body.style.overflow = '';
-        }
-
-        hamburger.addEventListener('click', toggleMenu);
-        overlay.addEventListener('click', closeMenu);
-
-        // Закрываем меню при клике на ссылку внутри
-        document.querySelectorAll('.nav-menu a').forEach(link => {
-            link.addEventListener('click', closeMenu);
-        });
-
-        // Закрываем при изменении размера окна (если стало широко)
-        window.addEventListener('resize', function() {
-            if (window.innerWidth > 820) {
-                closeMenu();
-            }
-        });
-    })();
-</script>
-
-
+    <script src="main.js"></script>
 </body>
 </html>
