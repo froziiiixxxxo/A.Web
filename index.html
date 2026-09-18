@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A.Web — Сайты для малого бизнеса</title>
+    <meta name="description" content="Разработка сайтов для малого бизнеса. Визитки, каталоги, лендинги. Быстро, красиво, современно.">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Шапка -->
+    <header class="header">
+        <div class="container">
+            <div class="header__inner">
+                <a href="#" class="logo">A.Web</a>
+                <nav class="nav">
+                    <a href="#about" class="nav__link">Обо мне</a>
+                    <a href="#services" class="nav__link">Услуги</a>
+                    <a href="#works" class="nav__link">Работы</a>
+                    <a href="#contact" class="nav__link">Контакты</a>
+                </nav>
+                <a href="@frzmanager" target="_blank" class="btn btn--primary">Обсудить проект</a>
+                <button class="burger" aria-label="Меню">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Мобильное меню -->
+    <div class="mobile-menu">
+        <nav class="mobile-menu__nav">
+            <a href="#about" class="mobile-menu__link">Обо мне</a>
+            <a href="#services" class="mobile-menu__link">Услуги</a>
+            <a href="#works" class="mobile-menu__link">Работы</a>
+            <a href="#contact" class="mobile-menu__link">Контакты</a>
+            <a href="https://t.me/frzmanager" target="_blank" class="btn btn--primary">Обсудить проект</a>
+        </nav>
+    </div>
+
+    <!-- Главный экран -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero__inner">
+                <div class="hero__content">
+                    <h1 class="hero__title fade-in">
+                        От идеи<br>до<br><span class="text-accent">работающего сайта</span>
+                    </h1>
+                    <p class="hero__subtitle fade-in">
+                        Создаю современные сайты для малого бизнеса: <br>визитки, каталоги, лендинги. С использованием ИИ для ускорения.
+                    </p>
+                    <a href="https://t.me/frzmanager" target="_blank" class="btn btn--large btn--primary fade-in">
+                        Обсудить проект
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                            <path d="M4 10H16M16 10L10 4M16 10L10 16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
+                </div>
+                <div class="hero__image fade-in">
+                    <div class="hero__photo">
+                        <!-- Здесь будет ваша фотография -->
+                        <img src="image\photonasite.jpg" alt="Фото разработчика A.Web">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Бегущая строка -->
+    <div class="marquee">
+        <div class="marquee__content">
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>JavaScript</span>
+            <span>Claude AI</span>
+            <span>Адаптивная верстка</span>
+            <span>Figma</span>
+            <span>Git</span>
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>JavaScript</span>
+            <span>Claude AI</span>
+            <span>Адаптивная верстка</span>
+            <span>Figma</span>
+            <span>Git</span>
+        </div>
+    </div>
+
+    <!-- Обо мне -->
+    <section id="about" class="about section">
+        <div class="container">
+            <div class="about__inner">
+                <div class="about__content reveal">
+                    <h2 class="section__title">Обо мне</h2>
+                    <div class="about__text">
+                        <p>Привет! Меня зовут Антон, и я создаю сайты для малого бизнеса.</p>
+                        <p>Начал разрабатывать в 2025 году. За это время сделал более <strong>10 проектов</strong> для реальных клиентов — салоны красоты, магазины, услуги.</p>
+                        <p>Работаю с современными технологиями: HTML, CSS, JavaScript. Использую <strong>Claude и другие ИИ-инструменты</strong> для ускорения разработки и автоматизации рутинных задач.</p>
+                        <p>Моя цель — помочь малому бизнесу быть заметным в интернете. Делаю сайты, которые не просто красиво выглядят, но и <strong>приносят клиентов</strong>.</p>
+                    </div>
+                    <div class="about__stats">
+                        <div class="stat">
+                            <div class="stat__number">10+</div>
+                            <div class="stat__label">проектов</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat__number">1</div>
+                            <div class="stat__label">год опыта</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat__number">100%</div>
+                            <div class="stat__label">довольных клиентов</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Услуги -->
+    <section id="services" class="services section">
+        <div class="container">
+            <h2 class="section__title reveal">Услуги</h2>
+            <div class="services__grid">
+                <div class="service-card reveal">
+                    <div class="service-card__icon">
+                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                            <rect x="5" y="8" width="30" height="24" rx="2" stroke="currentColor" stroke-width="2"/>
+                            <path d="M5 14H35" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                    </div>
+                    <h3 class="service-card__title">Сайт-визитка</h3>
+                    <p class="service-card__description">Одностраничный сайт с информацией о вашем бизнесе, контактами и формой обратной связи.</p>
+                    <div class="service-card__price">от 5 000 ₽</div>
+                </div>
+
+                <div class="service-card reveal">
+                    <div class="service-card__icon">
+                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                            <rect x="5" y="5" width="30" height="30" rx="2" stroke="currentColor" stroke-width="2"/>
+                            <path d="M5 12H35M12 5V35" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                    </div>
+                    <h3 class="service-card__title">Сайт с каталогом</h3>
+                    <p class="service-card__description">Многостраничный сайт с каталогом товаров или услуг и удобной навигацией.</p>
+                    <div class="service-card__price">от 6 000 ₽</div>
+                </div>
+
+                <div class="service-card reveal">
+                    <div class="service-card__icon">
+                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                            <rect x="5" y="8" width="30" height="24" rx="2" stroke="currentColor" stroke-width="2"/>
+                            <circle cx="12" cy="18" r="2" fill="currentColor"/>
+                            <circle cx="20" cy="18" r="2" fill="currentColor"/>
+                            <circle cx="28" cy="18" r="2" fill="currentColor"/>
+                        </svg>
+                    </div>
+                    <h3 class="service-card__title">Сайт с админ-панелью</h3>
+                    <p class="service-card__description">Сайт с возможностью самостоятельно управлять контентом: добавлять товары, редактировать информацию.</p>
+                    <div class="service-card__price">от 7 000 ₽</div>
+                </div>
+
+                <div class="service-card reveal">
+                    <div class="service-card__icon">
+                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                            <path d="M20 5V35M5 20H35" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            <circle cx="20" cy="20" r="12" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                    </div>
+                    <h3 class="service-card__title">Автоматизация через ИИ</h3>
+                    <p class="service-card__description">Интеграция ИИ-инструментов для автоматизации: чат-боты, обработка заявок, генерация контента.</p>
+                    <div class="service-card__price">от 7 000 ₽</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Работы -->
+    <section id="works" class="works section">
+        <div class="container">
+            <h2 class="section__title reveal">Мои работы</h2>
+            <div class="works__grid">
+                <article class="work-card reveal">
+                    <div class="work-card__image">
+                        <img src="image\flower.jpg" alt="Сайт для цветочного магазина Территория цветов">
+                    </div>
+                    <div class="work-card__content">
+                        <h3 class="work-card__title">Территория цветов</h3>
+                        <p class="work-card__description">Сайт для цветочного магазина с каталогом букетов и формой заказа</p>
+                        <a href="https://froziiiixxxxo.github.io/territoriacvetov/" class="work-card__link">
+                            Посмотреть
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                <path d="M3 8H13M13 8L8 3M13 8L8 13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </a>
+                    </div>
+                </article>
+
+                <article class="work-card reveal">
+                    <div class="work-card__image">
+                        <img src="image\contessaa.jpg" alt="Сайт для салона красоты Contessa Hair">
+                    </div>
+                    <div class="work-card__content">
+                        <h3 class="work-card__title">Contessa Hair</h3>
+                        <p class="work-card__description">Сайт-визитка для салона красоты с галереей работ и записью онлайн</p>
+                        <a href="https://froziiiixxxxo.github.io/contessahair/" class="work-card__link">
+                            Посмотреть
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                <path d="M3 8H13M13 8L8 3M13 8L8 13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </a>
+                    </div>
+                </article>
+
+                <article class="work-card reveal">
+                    <div class="work-card__image">
+                        <img src="image\sclad.jpg" alt="Сайт для склада в Калуге">
+                    </div>
+                    <div class="work-card__content">
+                        <h3 class="work-card__title">Склад в Калуге</h3>
+                        <p class="work-card__description">Корпоративный сайт с информацией об услугах аренды складских помещений</p>
+                        <a href="https://froziiiixxxxo.github.io/sclad/" class="work-card__link">
+                            Посмотреть
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                <path d="M3 8H13M13 8L8 3M13 8L8 13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </a>
+                    </div>
+                </article>
+
+                <article class="work-card reveal">
+                    <div class="work-card__image">
+                        <img src="image\paricma.jpg" alt="Сайт для парикмахерской Анна&Шик">
+                    </div>
+                    <div class="work-card__content">
+                        <h3 class="work-card__title">Анна&Шик</h3>
+                        <p class="work-card__description">Лендинг для парикмахерской с прайс-листом и удобной формой записи</p>
+                        <a href="https://froziiiixxxxo.github.io/Anna-Shik/" class="work-card__link">
+                            Посмотреть
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                <path d="M3 8H13M13 8L8 3M13 8L8 13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Как я работаю -->
+    <section class="process section">
+        <div class="container">
+            <h2 class="section__title reveal">Как я работаю</h2>
+            <div class="process__grid">
+                <div class="process-step reveal">
+                    <div class="process-step__number">01</div>
+                    <h3 class="process-step__title">Заявка</h3>
+                    <p class="process-step__description">Вы оставляете заявку в Telegram или WhatsApp, рассказываете о своем бизнесе и задачах</p>
+                </div>
+                <div class="process-step reveal">
+                    <div class="process-step__number">02</div>
+                    <h3 class="process-step__title">Обсуждение</h3>
+                    <p class="process-step__description">Обсуждаем детали проекта, сроки и стоимость. Заключаем договор и получаю предоплату</p>
+                </div>
+                <div class="process-step reveal">
+                    <div class="process-step__number">03</div>
+                    <h3 class="process-step__title">Разработка</h3>
+                    <p class="process-step__description">Создаю дизайн и верстаю сайт. Показываю промежуточные результаты, вношу правки</p>
+                </div>
+                <div class="process-step reveal">
+                    <div class="process-step__number">04</div>
+                    <h3 class="process-step__title">Запуск</h3>
+                    <p class="process-step__description">Тестирую сайт, размещаю на хостинге, передаю вам все доступы. Готово!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq section">
+        <div class="container">
+            <h2 class="section__title reveal">Частые вопросы</h2>
+            <div class="faq__list">
+                <div class="faq-item reveal">
+                    <button class="faq-item__question">
+                        Сколько времени занимает разработка?
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                            <path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                    <div class="faq-item__answer">
+                        <p>Сайт-визитка — 3-5 дней, сайт с каталогом — 7-10 дней, сайт с админ-панелью — 10-14 дней. Сроки зависят от сложности и объема правок.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item reveal">
+                    <button class="faq-item__question">
+                        Сколько стоит разработка?
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                            <path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                    <div class="faq-item__answer">
+                        <p>Цены начинаются от 5 000 ₽ за сайт-визитку. Точная стоимость зависит от функционала и дизайна. Оплата по этапам: 50% предоплата, 50% после сдачи проекта.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item reveal">
+                    <button class="faq-item__question">
+                        Сайт будет адаптирован под телефон?
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                            <path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                    <div class="faq-item__answer">
+                        <p>Да, все мои сайты адаптивные — они корректно отображаются на компьютерах, планшетах и телефонах. Это входит в базовую стоимость.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item reveal">
+                    <button class="faq-item__question">
+                        Сколько правок я могу внести?
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                            <path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                    <div class="faq-item__answer">
+                        <p>В стоимость проекта входят 2 раунда правок. Дополнительные изменения обсуждаются отдельно.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item reveal">
+                    <button class="faq-item__question">
+                        Какая форма оплаты?
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                            <path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                    <div class="faq-item__answer">
+                        <p>Принимаю оплату на карту СБП или через ЮMoney. Заключаем договор, работаю официально через самозанятость.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Контакты -->
+    <section id="contact" class="contact section">
+        <div class="container">
+            <div class="contact__inner reveal">
+                <h2 class="contact__title">Готовы обсудить проект?</h2>
+                <p class="contact__subtitle">Напишите мне в удобный мессенджер — отвечу в течение часа</p>
+                <div class="contact__buttons">
+                    <a href="https://t.me/frzmanager" target="_blank" class="btn btn--large btn--primary">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M21 5L2 12.5L9 13.5M21 5L18.5 20L9 13.5M21 5L9 13.5M9 13.5V19L12.2488 15.7229" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        Telegram
+                    </a>
+                    <a href="https://wa.me/79507162049" target="_blank" class="btn btn--large btn--outline">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M3 21L4.65 15.3C3.63 13.6 3.06 11.62 3.06 9.57C3.06 4.73 7.02 0.769999 11.86 0.769999C14.2 0.769999 16.39 1.69 18.03 3.33C19.67 4.97 20.6 7.17 20.6 9.5C20.6 14.34 16.64 18.3 11.8 18.3C9.89 18.3 8.03 17.79 6.41 16.84L3 21Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        WhatsApp
+                    </a>
+                </div>
+                <div class="contact__email">
+                    или напишите на почту: <a href="mailto:pogreckijanton9@gmail.com">pogreckijanton9@gmail.com</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Футер -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__inner">
+                <div class="footer__column">
+                    <div class="logo footer__logo">A.Web</div>
+                    <p class="footer__text">Разработка сайтов для малого бизнеса</p>
+                </div>
+                <div class="footer__column">
+                    <h4 class="footer__title">Навигация</h4>
+                    <nav class="footer__nav">
+                        <a href="#about" class="footer__link">Обо мне</a>
+                        <a href="#services" class="footer__link">Услуги</a>
+                        <a href="#works" class="footer__link">Работы</a>
+                        <a href="#contact" class="footer__link">Контакты</a>
+                    </nav>
+                </div>
+                <div class="footer__column">
+                    <h4 class="footer__title">Контакты</h4>
+                    <div class="footer__contacts">
+                        <a href="@frzmanager" target="_blank" class="footer__link">Telegram</a>
+                        <a href="https://wa.me/79507162049" target="_blank" class="footer__link">WhatsApp</a>
+                        <a href="mailto:pogreckijanton9@gmail.com" class="footer__link">Email</a>
+                    </div>
+                </div>
+                <div class="footer__column">
+                    <h4 class="footer__title">Социальные сети</h4>
+                    <div class="footer__socials">
+                        <a href="https://www.tiktok.com/@awebdsgn?_r=1&_t=ZS-99pezVzcc20" target="_blank" class="footer__social" aria-label="TikTok">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z"/>
+                            </svg>
+                        </a>
+                        <a href="https://vk.ru/id1051755986" target="_blank" class="footer__social" aria-label="VK">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12.785 16.241s.288-.032.436-.193c.136-.148.131-.425.131-.425s-.019-1.297.582-1.488c.592-.188 1.354 1.254 2.161 1.808.612.42 1.076.328 1.076.328l2.163-.03s1.13-.07.594-.96c-.044-.073-.314-.661-1.615-1.87-1.36-1.264-1.178-1.059.461-3.243.999-1.332 1.398-2.145 1.274-2.493-.118-.332-.847-.244-.847-.244l-2.434.015s-.18-.025-.314.055c-.13.078-.214.261-.214.261s-.383 1.02-.894 1.889c-1.077 1.829-1.508 1.925-1.684 1.811-.409-.267-.307-1.074-.307-1.647 0-1.791.271-2.537-.529-2.73-.266-.064-.462-.106-1.143-.113-.874-.009-1.613.003-2.032.208-.279.136-.494.44-.363.458.162.022.529.099.724.364.252.343.243 1.114.243 1.114s.145 2.108-.338 2.369c-.331.179-.786-.187-1.762-1.859-.499-.85-.876-1.789-.876-1.789s-.073-.178-.203-.273c-.157-.115-.377-.152-.377-.152l-2.312.015s-.347.01-.474.161c-.113.134-.009.411-.009.411s1.804 4.225 3.845 6.35c1.872 1.948 3.995 1.82 3.995 1.82h.964z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p class="footer__copy">© 2026 A.Web. Все права защищены</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
